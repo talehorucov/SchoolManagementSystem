@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.Entities\bin\Debug\SMS.Entities.dll.config
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.Entities\bin\Debug\SMS.Entities.dll
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.Entities\bin\Debug\SMS.Entities.pdb
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.Entities\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.Entities\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.Entities\obj\Debug\SMS.Entities.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.Entities\obj\Debug\SMS.Entities.csproj.CopyComplete
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.Entities\obj\Debug\SMS.Entities.dll
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.Entities\obj\Debug\SMS.Entities.pdb
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.Entities\obj\Debug\SMS.Entities.csprojAssemblyReference.cache

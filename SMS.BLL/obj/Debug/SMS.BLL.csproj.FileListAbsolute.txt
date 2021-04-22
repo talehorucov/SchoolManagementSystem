@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.BLL\bin\Debug\SMS.BLL.dll
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.BLL\bin\Debug\SMS.BLL.pdb
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.BLL\bin\Debug\SMS.DAL.dll
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.BLL\bin\Debug\SMS.Entities.dll
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.BLL\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.BLL\bin\Debug\SMS.DAL.pdb
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.BLL\bin\Debug\SMS.DAL.dll.config
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.BLL\bin\Debug\SMS.Entities.pdb
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.BLL\bin\Debug\SMS.Entities.dll.config
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.BLL\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.BLL\obj\Debug\SMS.BLL.csprojAssemblyReference.cache
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.BLL\obj\Debug\SMS.BLL.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.BLL\obj\Debug\SMS.BLL.csproj.CopyComplete
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.BLL\obj\Debug\SMS.BLL.dll
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.BLL\obj\Debug\SMS.BLL.pdb

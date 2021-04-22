@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85E1C601-B14D-4D1E-8545-57C3B01F1666}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SMS.BLL</RootNamespace>
+    <AssemblyName>SMS.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstracts\IAttendancesService.cs" />
+    <Compile Include="Abstracts\IClassesService.cs" />
+    <Compile Include="Abstracts\IExamResultService.cs" />
+    <Compile Include="Abstracts\IExamTypeService.cs" />
+    <Compile Include="Abstracts\IGenericService.cs" />
+    <Compile Include="Abstracts\ILoggingService.cs" />
+    <Compile Include="Abstracts\IRolesService.cs" />
+    <Compile Include="Abstracts\IStaffService.cs" />
+    <Compile Include="Abstracts\IStudentsMessageService.cs" />
+    <Compile Include="Abstracts\IStudentsService.cs" />
+    <Compile Include="Abstracts\ISubjectService.cs" />
+    <Compile Include="Concrete\AttendancesManager.cs" />
+    <Compile Include="Concrete\ClassesManager.cs" />
+    <Compile Include="Concrete\ExamResultManager.cs" />
+    <Compile Include="Concrete\ExamTypesManager.cs" />
+    <Compile Include="Concrete\GenericManager.cs" />
+    <Compile Include="Concrete\LoggingManager.cs" />
+    <Compile Include="Concrete\MessagesManager.cs" />
+    <Compile Include="Concrete\RolesManager.cs" />
+    <Compile Include="Concrete\StaffManager.cs" />
+    <Compile Include="Concrete\StudentsManager.cs" />
+    <Compile Include="Concrete\StudentsMessageManager.cs" />
+    <Compile Include="Concrete\SubjectManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SMS.DAL\SMS.DAL.csproj">
+      <Project>{0BB6A63C-34EE-4B4A-90A2-608B059F01D0}</Project>
+      <Name>SMS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMS.Entities\SMS.Entities.csproj">
+      <Project>{7BB635BB-76A0-489A-8FBC-742E319B5DFB}</Project>
+      <Name>SMS.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

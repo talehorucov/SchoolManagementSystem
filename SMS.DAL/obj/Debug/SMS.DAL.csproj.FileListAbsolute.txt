@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\bin\Debug\SMS.DAL.dll.config
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\bin\Debug\SMS.DAL.dll
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\bin\Debug\SMS.DAL.pdb
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\bin\Debug\SMS.Entities.dll
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\bin\Debug\SMS.Entities.pdb
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\bin\Debug\SMS.Entities.dll.config
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\obj\Debug\SMS.DAL.csprojAssemblyReference.cache
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\obj\Debug\SMS.DAL.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\obj\Debug\SMS.DAL.csproj.CopyComplete
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\obj\Debug\SMS.DAL.dll
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\obj\Debug\SMS.DAL.pdb
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\obj\Debug\SMS.DAL.Migrations.CreateDatabase.resources
+C:\Users\User\source\repos\SchoolManagementSystem\SMS.DAL\obj\Debug\SMS.DAL.csproj.GenerateResource.cache
