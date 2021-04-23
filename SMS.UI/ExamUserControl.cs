@@ -29,14 +29,22 @@ namespace SMS.UI
                 cmbExam.DisplayMember = "Type";
                 cmbExam.ValueMember = "Id";
 
-                if (StudentsManager.onlineStudent == null)
+                if (StudentsManager.onlineStudent == null && StaffManager.onlineStaff.RoleId != 1)
                 {
                     cmbClass.DataSource = classService.GetAll(x => x.Staffs.Any(a => a.Id == StaffManager.onlineStaff.StaffId));
                     cmbClass.DisplayMember = "ClassName";
                     cmbClass.ValueMember = "Id";
                 }
+                else if (StudentsManager.onlineStudent == null && StaffManager.onlineStaff.RoleId == 1)
+                {
+                    cmbClass.DataSource = classService.GetAll(x => x.Staffs.Any(a => a.Id == StaffManager.onlineStaff.StaffId));
+                    cmbClass.DisplayMember = "ClassName";
+                    cmbClass.ValueMember = "Id";
+                    btnSave.Visible = false;
+                }
                 else
                 {
+                    btnSave.Visible = false;
                     cmbClass.Visible = false;
                     lblClass.Visible = false;
                 }

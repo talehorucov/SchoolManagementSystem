@@ -14,8 +14,8 @@ namespace SMS.DAL.Concrete.EntityFramework
     {
         public bool AddStaffClasses(int staffId, int classId)
         {
-            var staffs = context.Staffs.Where(x => x.Id == staffId).Single();
-            var classes = context.Classes.Where(x => x.Id == classId).Single();
+            var classes = context.Classes.Include("Staffs").Where(x => x.Id == classId).Single();
+            var staffs = context.Staffs.Include("Classes").Where(x => x.Id == staffId).Single();
             staffs.Classes.Add(classes);
             return context.SaveChanges() > 0 ? true : false;
         }
@@ -47,8 +47,8 @@ namespace SMS.DAL.Concrete.EntityFramework
 
         public bool RemoveStaffClasses(int staffId, int classId)
         {
-            var classes = context.Classes.Where(x => x.Id == classId).Single();
-            var staffs = context.Staffs.Where(x => x.Id == staffId).Single();
+            var classes = context.Classes.Include("Staffs").Where(x => x.Id == classId).Single();
+            var staffs = context.Staffs.Include("Classes").Where(x => x.Id == staffId).Single();
             staffs.Classes.Remove(classes);
             return context.SaveChanges() > 0 ? true : false;
         }

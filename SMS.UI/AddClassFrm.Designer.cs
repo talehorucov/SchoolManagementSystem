@@ -117,7 +117,7 @@
             this.dgvAddClasses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Add,
             this.ClassName});
-            this.dgvAddClasses.Location = new System.Drawing.Point(22, 67);
+            this.dgvAddClasses.Location = new System.Drawing.Point(22, 76);
             this.dgvAddClasses.MultiSelect = false;
             this.dgvAddClasses.Name = "dgvAddClasses";
             this.dgvAddClasses.RowHeadersVisible = false;
@@ -149,7 +149,7 @@
             this.dgvDeleteClasses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Delete,
             this.deleteClassName});
-            this.dgvDeleteClasses.Location = new System.Drawing.Point(255, 67);
+            this.dgvDeleteClasses.Location = new System.Drawing.Point(255, 76);
             this.dgvDeleteClasses.MultiSelect = false;
             this.dgvDeleteClasses.Name = "dgvDeleteClasses";
             this.dgvDeleteClasses.RowHeadersVisible = false;

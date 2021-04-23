@@ -122,6 +122,7 @@
             // 
             // btnAddClass
             // 
+            this.btnAddClass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddClass.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAddClass.Location = new System.Drawing.Point(19, 667);
             this.btnAddClass.Name = "btnAddClass";

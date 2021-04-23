@@ -9,5 +9,8 @@ namespace SMS.DAL.Abstracts
 {
     public interface ISubjectsDAL:IEntityRepository<Subjects>
     {
+        List<Subjects> NonSubjectClasses(int classId);
+        bool AddSubjectClasses(int subjectUd, int classId);
+        bool RemoveSubjectClasses(int subjectId, int classId);
     }
 }

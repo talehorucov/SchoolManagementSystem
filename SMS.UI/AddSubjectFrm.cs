@@ -22,8 +22,8 @@ namespace SMS.UI
             InitializeComponent();
         }
 
-        SMSContext context = new SMSContext();
         IGenericService<Subjects> subjectService = new SubjectManager(new EFSubjectsDAL());
+        EFSubjectsDAL subjectDAL = new EFSubjectsDAL();
 
         private void AddSubjectFrm_Load(object sender, EventArgs e)
         {
@@ -32,28 +32,18 @@ namespace SMS.UI
 
         private void List()
         {
-            clbAdd.Items.Clear();
-            clbDelete.Items.Clear();
+
             var classId = Convert.ToInt32(lblDgvId.Text);
-            var classes = from c in context.Subjects
-                          where c.Classes.Any(x => x.Id == classId)
-                          select c;
+            var subject = subjectService.GetAll(x => x.Classes.Any(c => c.Id == classId));
 
-            foreach (var item in classes)
-            {
-                clbDelete.Items.Add(item.SubjectName);
-            }
-
-            var addList = subjectService.GetAll();
-            foreach (var item in addList)
-            {
-                clbAdd.Items.Add(item.SubjectName);
-            }
-            foreach (var item in clbDelete.Items.OfType<string>().ToList())
-            {
-                clbAdd.Items.Remove(item);
-            }
+            dgvDeleteSubjects.DataSource = subject;
+            dgvAddSubjects.DataSource = subjectDAL.NonSubjectClasses(classId);
+            dgvAddSubjects.Columns["Id"].Visible = false;
+            dgvAddSubjects.Columns["IsActive"].Visible = false;
+            dgvDeleteSubjects.Columns["Id"].Visible = false;
+            dgvDeleteSubjects.Columns["IsActive"].Visible = false;
         }
+
         private void cbtnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -61,27 +51,28 @@ namespace SMS.UI
 
         private void btnAdded_Click(object sender, EventArgs e)
         {
-
-            foreach (var item in clbAdd.CheckedItems)
+            int classId = Convert.ToInt32(lblDgvId.Text);
+            for (int i = 0; i < dgvAddSubjects.Rows.Count; i++)
             {
-                int classId = Convert.ToInt32(lblDgvId.Text);
-                var classes = context.Classes.FirstOrDefault(x => x.Id == classId);
-                var subjects = context.Subjects.Where(x => x.SubjectName == item.ToString()).FirstOrDefault();
-                classes.Subjects.Add(subjects);
-                context.SaveChanges();
+                if (dgvAddSubjects.Rows[i].Cells["Add"].Value != null)
+                {
+                    int subjectId = Convert.ToInt32(dgvAddSubjects.Rows[i].Cells["Id"].Value);
+                    var a = subjectDAL.AddSubjectClasses(subjectId, classId);
+                }
             }
             List();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            foreach (var item in clbDelete.CheckedItems)
+            int classId = Convert.ToInt32(lblDgvId.Text);
+            for (int i = 0; i < dgvDeleteSubjects.Rows.Count; i++)
             {
-                int classId = Convert.ToInt32(lblDgvId.Text);
-                var classes = context.Classes.FirstOrDefault(x => x.Id == classId);
-                var subjects = context.Subjects.Where(x => x.SubjectName == item.ToString()).FirstOrDefault();
-                classes.Subjects.Remove(subjects);
-                context.SaveChanges();
+                if (dgvDeleteSubjects.Rows[i].Cells["Delete"].Value != null)
+                {
+                    int subjectId = Convert.ToInt32(dgvDeleteSubjects.Rows[i].Cells["Id"].Value);
+                    subjectDAL.RemoveSubjectClasses(subjectId, classId);
+                }
             }
             List();
         }

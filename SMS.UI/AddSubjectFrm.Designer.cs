@@ -28,31 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.clbDelete = new System.Windows.Forms.CheckedListBox();
-            this.clbAdd = new System.Windows.Forms.CheckedListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.lblDgvId = new System.Windows.Forms.Label();
             this.btnAdded = new System.Windows.Forms.Button();
+            this.dgvDeleteSubjects = new System.Windows.Forms.DataGridView();
+            this.dgvAddSubjects = new System.Windows.Forms.DataGridView();
+            this.Add = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.deleteSubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbtnExit = new SMS.UI.CircularButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeleteSubjects)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddSubjects)).BeginInit();
             this.SuspendLayout();
-            // 
-            // clbDelete
-            // 
-            this.clbDelete.FormattingEnabled = true;
-            this.clbDelete.Location = new System.Drawing.Point(255, 67);
-            this.clbDelete.Name = "clbDelete";
-            this.clbDelete.Size = new System.Drawing.Size(154, 259);
-            this.clbDelete.TabIndex = 3;
-            // 
-            // clbAdd
-            // 
-            this.clbAdd.FormattingEnabled = true;
-            this.clbAdd.Location = new System.Drawing.Point(22, 67);
-            this.clbAdd.Name = "clbAdd";
-            this.clbAdd.Size = new System.Drawing.Size(154, 259);
-            this.clbAdd.TabIndex = 2;
             // 
             // label2
             // 
@@ -79,6 +69,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -104,6 +95,7 @@
             // btnAdded
             // 
             this.btnAdded.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnAdded.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdded.FlatAppearance.BorderSize = 0;
             this.btnAdded.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdded.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -116,8 +108,73 @@
             this.btnAdded.UseVisualStyleBackColor = false;
             this.btnAdded.Click += new System.EventHandler(this.btnAdded_Click);
             // 
+            // dgvDeleteSubjects
+            // 
+            this.dgvDeleteSubjects.AllowUserToAddRows = false;
+            this.dgvDeleteSubjects.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDeleteSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDeleteSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Delete,
+            this.deleteSubjectName});
+            this.dgvDeleteSubjects.Location = new System.Drawing.Point(255, 76);
+            this.dgvDeleteSubjects.MultiSelect = false;
+            this.dgvDeleteSubjects.Name = "dgvDeleteSubjects";
+            this.dgvDeleteSubjects.RowHeadersVisible = false;
+            this.dgvDeleteSubjects.Size = new System.Drawing.Size(154, 259);
+            this.dgvDeleteSubjects.TabIndex = 15;
+            // 
+            // dgvAddSubjects
+            // 
+            this.dgvAddSubjects.AllowUserToAddRows = false;
+            this.dgvAddSubjects.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAddSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAddSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Add,
+            this.SubjectName});
+            this.dgvAddSubjects.Location = new System.Drawing.Point(22, 76);
+            this.dgvAddSubjects.MultiSelect = false;
+            this.dgvAddSubjects.Name = "dgvAddSubjects";
+            this.dgvAddSubjects.RowHeadersVisible = false;
+            this.dgvAddSubjects.Size = new System.Drawing.Size(154, 259);
+            this.dgvAddSubjects.TabIndex = 14;
+            // 
+            // Add
+            // 
+            this.Add.FalseValue = "false";
+            this.Add.FillWeight = 50F;
+            this.Add.HeaderText = "Add";
+            this.Add.Name = "Add";
+            this.Add.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Add.TrueValue = "true";
+            // 
+            // SubjectName
+            // 
+            this.SubjectName.DataPropertyName = "SubjectName";
+            this.SubjectName.HeaderText = "Subjects";
+            this.SubjectName.Name = "SubjectName";
+            this.SubjectName.ReadOnly = true;
+            // 
+            // Delete
+            // 
+            this.Delete.FalseValue = "false";
+            this.Delete.FillWeight = 50F;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Delete.TrueValue = "false";
+            // 
+            // deleteSubjectName
+            // 
+            this.deleteSubjectName.DataPropertyName = "SubjectName";
+            this.deleteSubjectName.HeaderText = "Subjects";
+            this.deleteSubjectName.Name = "deleteSubjectName";
+            this.deleteSubjectName.ReadOnly = true;
+            // 
             // cbtnExit
             // 
+            this.cbtnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbtnExit.FlatAppearance.BorderSize = 0;
             this.cbtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.cbtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -134,33 +191,38 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(427, 424);
+            this.Controls.Add(this.dgvDeleteSubjects);
+            this.Controls.Add(this.dgvAddSubjects);
             this.Controls.Add(this.cbtnExit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.lblDgvId);
             this.Controls.Add(this.btnAdded);
-            this.Controls.Add(this.clbDelete);
-            this.Controls.Add(this.clbAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddSubjectFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddSubjectFrm";
             this.Load += new System.EventHandler(this.AddSubjectFrm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeleteSubjects)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddSubjects)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckedListBox clbDelete;
-        private System.Windows.Forms.CheckedListBox clbAdd;
         private CircularButton cbtnExit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDelete;
         public System.Windows.Forms.Label lblDgvId;
         private System.Windows.Forms.Button btnAdded;
+        private System.Windows.Forms.DataGridView dgvDeleteSubjects;
+        private System.Windows.Forms.DataGridView dgvAddSubjects;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Delete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deleteSubjectName;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Add;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubjectName;
     }
 }
