@@ -21,7 +21,7 @@ namespace SMS.DAL.Concrete.EntityFramework
                     join staffClasses in context.Classes on classes.Id equals staffClasses.Id
                     join student in context.Students on classes.Id equals student.ClassId
                     join subject in context.Subjects on staff.SubjectId equals subject.Id
-                    where student.Id == studentId && student.IsActive == true
+                    where student.Id == studentId && student.IsActive == true && staff.IsActive == true
                     select new ComplexStudentDashboard
                     {
                         SubjectName = subject.SubjectName,

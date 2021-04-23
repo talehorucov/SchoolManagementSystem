@@ -38,6 +38,7 @@ namespace SMS.UI
         private void NotificationFrm_Load(object sender, EventArgs e)
         {
             dgvMessage.DataSource = studentsMessageDAL.GetMessages(StudentsManager.onlineStudent.Id);
+            dgvMessage.Columns["Id"].Visible = false;
             int i = 1;
             foreach (DataGridViewRow row in dgvMessage.Rows)
             {

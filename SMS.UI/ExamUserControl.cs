@@ -153,6 +153,7 @@ namespace SMS.UI
                         examResult.Mark = Convert.ToByte(dgvExam.Rows[i].Cells["Mark"].Value);
                         examResultsDAL.Add(examResult);
                     }
+                    MessageBox.Show("Succesfully add exam marks !");
                 }
                 else
                 {
@@ -160,11 +161,12 @@ namespace SMS.UI
                     {
                         int examResultId = Convert.ToInt32(dgvExam.Rows[i].Cells["ExamResultId"].Value);
                         var getExamResult = examResultsService.Get(examResultId);
-                        getExamResult.ExamTypesId = Convert.ToInt32(cmbClass.SelectedValue);
+                        getExamResult.ExamTypesId = Convert.ToInt32(cmbExam.SelectedValue);
                         getExamResult.StudentId = Convert.ToInt32(dgvExam.Rows[i].Cells["StudentId"].Value);
                         getExamResult.SubjectId = StaffManager.onlineStaff.SubjectId;
                         getExamResult.Mark = Convert.ToByte(dgvExam.Rows[i].Cells["Mark"].Value);
                         examResultsDAL.UpdateOrDelete(getExamResult);
+                        MessageBox.Show("Succesfully update exam marks !");
                     }
                 }
             }
